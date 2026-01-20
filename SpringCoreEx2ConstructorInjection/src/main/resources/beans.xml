@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+ 
+	<bean id="stu" class = "com.test.Student">
+		<property name="id" value="1"></property>
+		<property name="name" value="Dhoni"></property>
+		<property name="rollNo" value="001"></property>
+		<property name="marks" value="99"></property>
+	</bean>
+	<bean id = "stu1" class = "com.test.Student">
+	
+	
+	<constructor-arg name="id" value="201"></constructor-arg>
+	<constructor-arg name="name" value="Kohli"></constructor-arg>
+	<constructor-arg name="rollNo" value="018"></constructor-arg>
+	<constructor-arg name="marks" value="100"></constructor-arg>
+	</bean>
+		</beans>
