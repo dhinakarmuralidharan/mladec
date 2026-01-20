@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: SpringBootStudentMicroservice
+  web:
+    error:
+      whitelabel:
+        enabled: false
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8760/eureka/
+server:
+  port: 2222
