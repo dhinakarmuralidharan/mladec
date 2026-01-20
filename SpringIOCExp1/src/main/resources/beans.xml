@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+ 
+    <bean id="ord1" class="com.test.Order1">
+        <property name="id" value="1"/>
+        <property name="name" value="apple"/>
+        <property name="price" value="200"/>
+    </bean>
+ 
+    <bean id="ord2" class="com.test.Order1">
+        <property name="id" value="2"/>
+        <property name="name" value="Samsung"/>
+        <property name="price" value="50"/>
+    </bean>
+ 
+    <bean id="adr1" class="com.test.Address">
+        <property name="city" value="Chennai"/>
+        <property name="state" value="TN"/>
+    </bean>
+ 
+    <bean id="adr2" class="com.test.Address">
+        <property name="city" value="Chennai"/>
+        <property name="state" value="TN"/>
+    </bean>
+ 
+    <bean id="cst" class="com.test.Customer">
+        <property name="id" value="300"/>
+        <property name="name" value="Vinayak"/>
+        
+        <property name="adr">
+            <list>
+                <ref bean="adr1"/>
+                <ref bean="adr2"/>
+            </list>
+        </property>
+        
+ 
+        <property name="orders">
+            <list>
+                <ref bean="ord1"/>
+                <ref bean="ord2"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id = "ord3" class="com.test.Order1">
+    	<constructor-arg name="id" value="3"></constructor-arg>
+    	<constructor-arg name="name" value="fruits"></constructor-arg>
+    	<constructor-arg name="price" value="584"></constructor-arg>
+    </bean>
+    <bean id="adr3" class="com.test.Address">
+    	<constructor-arg  name="city" value="Mumbai"></constructor-arg>
+    	<constructor-arg name="state" value="Mh"></constructor-arg>
+	</bean>
+	<bean id="cst1" class="com.test.Customer">
+		<constructor-arg name="id" value="10"></constructor-arg>
+		<constructor-arg name="name" value="Tendulkar"></constructor-arg>
+		<constructor-arg name="adr">
+			<list>
+				<ref bean = "adr3"/>
+			</list>
+		</constructor-arg>
+		<constructor-arg name="orders">
+			<list>
+				<ref bean="ord3"/>
+			</list>
+		</constructor-arg>
+		
+		</bean>
+</beans>
