@@ -1,0 +1,6 @@
+#spring.application.name=SpringBootCloudGatewayService2
+spring:
+  application:
+    name: SpringBootCloudGatewayService2
+server:
+  port: 9393

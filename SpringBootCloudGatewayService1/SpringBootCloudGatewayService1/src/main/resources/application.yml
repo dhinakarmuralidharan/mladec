@@ -1,0 +1,6 @@
+#spring.application.name=SpringBootCloudGatewayService1
+spring:
+  application:
+    name: SpringBootCloudGatewayService1
+server:
+  port: 7373
